@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<h1>
+    Olá mundo
+</h1>
+
+<p>Lista de pessoas abaixo</p>
+<table class="table table-dark">
+
+    <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>Sobrenome</td>
+        <td>Data Nascimento</td>
+        <td>Idade</td>
+        <td>Sexo</td>
+    </tr>
+
+    <tr>
+
+        {% if pessoas %}
+        
+        {% for pessoa in pessoas  %}
+            <td> {{pessoa.id}}</td>
+            <td> {{pessoa.nome}}</td>
+            <td> {{pessoa.sobrenome}}</td>
+            <td> {{pessoa.datanascimento}}</td>
+            <td> {{pessoa.idade}}</td>
+            <td> {{pessoa.sexo}}</td>
+        {% endfor %}
+        {%else%}
+        <h2>Não existe registro </h2>
+        {% endif %}
+        
+    </tr>
+</table>
