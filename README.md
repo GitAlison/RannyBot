@@ -1,1 +1,2 @@
 # RannyBot
+adicionar
