@@ -5,9 +5,9 @@ import traceback
 import requests
 import json
 import urllib.request
-import entradaUser 
 
-token = "EAAL34wXGjT4BAAMceRhqZCNB4ZCld5B9JC9Ja59lsAlWCGmLqLbhfZAuUtXZA8Cu5WWPUM0tz3hZA5IqDxPy3uM6Cu1Bh7aI0JAkZCuECunMW0ZB0yfehACeYZCemnWOArYyVndOoEsZBqf4xFCxYsCZAQMH17L06FlJcOvfw6ZBXcHfwZDZD"
+
+token = "EAACu06yoC9UBAPJlOfWnMe4yT6OgjsqdsZAFYgjZAcb6ISE6glf1P9jDcyTM4ukTEEwEDMaAUJZCZAoQv7LPX3sHKVIZCZB1q6xAjl84UQZB4msS8l9pqlPKWFqQU5WbZBurd9DFLSFgkGM6dHH5YDzeH5bOf4MLH0gtkivnVzVOOjd2VvsoU5Ur"
 app = Flask(__name__)
 
 linkGrafh ='https://graph.facebook.com/v2.6/me/messages/?access_token='
@@ -33,13 +33,7 @@ def webhook():
             text = data['entry'][0]['messaging'][0]['message']['text'] # mensagem recebida
             msg = str(text.lower()) #mensagem json para string
             sender = data['entry'][0]['messaging'][0]['sender']['id'] # id do mensageiro
-            
-
-            
-                        
-            
-            
-            print(id)
+      
             if msg in entrada:
                 
                 retorno = 'Olá tudo bem,em que posso lhe ajuda ? :)'#Mensagem de retorno ao usuario
